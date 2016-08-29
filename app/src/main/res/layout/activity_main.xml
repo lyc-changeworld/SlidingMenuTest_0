@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:achuan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.example.achuan.slidingmenu.view.SlidingMenu
+        android:id="@+id/id_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        achuan:rightPadding="80dp"
+        android:background="@drawable/img_frame_background">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <!--添加侧滑界面-->
+            <include layout="@layout/left_menu"></include>
+            <!--下面为内容界面的布局-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/qq">
+                <Button
+                    android:onClick="toggleMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="切换菜单" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.example.achuan.slidingmenu.view.SlidingMenu>
+</RelativeLayout>
